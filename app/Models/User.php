@@ -17,6 +17,11 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+
+
+     protected $connection = 'pgsql'; // важно!
+    protected $table = 'users';
+
     protected $fillable = [
         'name',
         'email',

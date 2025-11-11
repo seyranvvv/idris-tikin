@@ -19,14 +19,12 @@ class MaterialResource extends JsonResource
             'code' => $this->material_code,
             'name' => $this->material_name,
             'category_name' => $this->category->m_cat_name ?? null,
-            // 'category' => [
-            //     'id' => $this->category->m_cat_id,
-            //     'name' => $this->category->m_cat_name,
-            //     'description' => $this->category->m_cat_desc
-            // ],
-           // 'unit' => $this->unit->name ?? null,
-            //'prices' => PriceResource::collection($this->prices),
-           // 'barcodes' => $this->barcodes->pluck('bar_barcode')
+            'sale_price' => $this->sale_price,
+            'barcodes' => $this->barcodes,
+            'unit' => $this->unit,
+            'category' => $this->category,
+            'custom_categories' => $this->custom_categories,
+            'images' => $this->images,
         ];
     }
 }
